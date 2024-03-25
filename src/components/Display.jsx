@@ -1,10 +1,14 @@
-import { Form } from "react-bootstrap";
 import style from "../App.module.css";
-const Display = () => {
+const Display = ({ displayValue }) => {
   return (
     <>
       {/* <Form.Control type="text" /> */}
-      <input type="text" className={style.display} />
+      <input
+        type="text"
+        className={style.display}
+        value={displayValue}
+        readOnly
+      />
     </>
   );
 };

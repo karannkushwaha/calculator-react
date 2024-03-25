@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import style from "../App.module.css";
 
-const ButtonsContainer = () => {
+const ButtonsContainer = ({ onButtonClick }) => {
   const buttonName = [
     "C",
     "1",
@@ -24,7 +24,11 @@ const ButtonsContainer = () => {
   return (
     <div className={style.buttoncontainer}>
       {buttonName.map((items) => (
-        <Button variant="secondary" className={style.button}>
+        <Button
+          variant="secondary"
+          className={style.button}
+          onClick={() => onButtonClick(items)}
+        >
           {items}
         </Button>
       ))}
